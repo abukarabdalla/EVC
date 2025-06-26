@@ -488,7 +488,8 @@ public class Ab {
             transactionHistory[transactionCount] = transaction;
             transactionCount++;
         } else {
-            // Shift all transactions down one position (FIFO)
+      \
+        
             for (int i = 0; i < transactionHistory.length - 1; i++) {
                 transactionHistory[i] = transactionHistory[i + 1];
             }
