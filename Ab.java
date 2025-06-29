@@ -11,6 +11,9 @@ public class Ab {
 
 
 
+
+    
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Date currentDateAndTime = new Date();
@@ -67,15 +70,23 @@ public class Ab {
                             System.out.println("Fadlan dooro number sax ah.");
                     }
                 }
-            } else {
+            }
+            else {
                 System.out.println("Password khaldan!");
             }
-        } else {
+        } 
+        else {
             System.out.println("Fadlan geli code-ka sax ah sida tusaalaha.");
         }
     }
 
 
+
+
+
+
+
+    
 
     private static void displayMainMenu() {
         System.out.println("\nEVPLus Menu:");
@@ -94,11 +105,20 @@ public class Ab {
 
 
 
+
+
+
+    
     private static void checkBalance() {
         System.out.println("Haraagaga waa $" + balance);
     }
 
 
+
+
+
+
+    
 
     private static void airtimeServices(Scanner input, Date date) {
         System.out.println("Kaarka hadalka:");
@@ -132,6 +152,12 @@ public class Ab {
 
 
 
+
+
+
+
+
+    
     private static void topUpAirtime(Scanner input, Date date, String action, String recipient) {
         System.out.print("Fadlan geli lacagta: ");
         double amount = input.nextDouble();
@@ -155,13 +181,18 @@ public class Ab {
                 recordTransaction(transaction);
                 System.out.println(transaction);
             }
-        } else {
+        }
+        else {
             System.out.println("Mahadsanid.");
         }
     }
 
 
 
+
+
+
+    
 
     private static void billPayment(Scanner input) {
         System.out.println("Bixi bill:");
@@ -173,9 +204,11 @@ public class Ab {
 
         if (amount > balance) {
             System.out.println("Haraagaaga kugu ma filna bixinta billka.");
-        } else if (amount <= 0) {
+        } 
+        else if (amount <= 0) {
             System.out.println("Fadlan gali lacag sax ah.");
-        } else {
+        } 
+        else {
             balance -= amount;
             String transaction = "Billka shirkadda " + company +
                     " si guul leh ayaa loo bixiyey: $" + amount +
@@ -187,6 +220,10 @@ public class Ab {
 
 
 
+
+
+
+    
     private static void transferMoney(Scanner input, Date date) {
         System.out.print("Fadlan geli numberka: ");
         String number = input.nextLine();
@@ -213,7 +250,8 @@ public class Ab {
         if (confirmation == 1) {
             if (amount > balance) {
                 System.out.println("Haraaga xisaabtaada kugu ma filna.");
-            } else {
+            }
+            else {
                 balance -= amount;
                 String transaction = "[-EVC PLUS-] $" + amount +
                         " ayaad u wareejisay " + number +
@@ -222,13 +260,18 @@ public class Ab {
                 recordTransaction(transaction);
                 System.out.println(transaction);
             }
-        } else {
+        } 
+        else {
             System.out.println("Mahadsanid.");
         }
     }
 
 
 
+
+
+
+    
     private static void transactionReport() {
         System.out.println("\nWarbixin Kooban (Finally " + transactionCount + " transactions):");
         for (int i = 0; i < transactionCount; i++) {
@@ -239,6 +282,12 @@ public class Ab {
 
 
 
+
+
+
+
+
+    
 
     private static void bankServices(Scanner input) {
         System.out.println("Salaam Bank:");
@@ -278,6 +327,11 @@ public class Ab {
 
 
 
+
+
+
+    
+
     private static void bankDeposit(Scanner input) {
         System.out.print("Geli lacagta aad dhigeyso: ");
         double amount = input.nextDouble();
@@ -285,7 +339,8 @@ public class Ab {
 
         if (amount <= 0) {
             System.out.println("Fadlan geli lacag sax ah.");
-        } else {
+        } 
+        else {
             balance += amount;
             String transaction = "Waad dhigatay $" + amount +
                     ". Haraagaagu hadda waa $" + balance;
@@ -296,6 +351,10 @@ public class Ab {
 
 
 
+
+
+    
+
     private static void bankWithdrawal(Scanner input) {
         System.out.print("Geli lacagta aad qaadaneyso: ");
         double amount = input.nextDouble();
@@ -303,9 +362,11 @@ public class Ab {
 
         if (amount <= 0) {
             System.out.println("Fadlan geli lacag sax ah.");
-        } else if (amount > balance) {
+        } 
+        else if (amount > balance) {
             System.out.println("Haraagaagu kugu filan ma aha.");
-        } else {
+        }
+        else {
             balance -= amount;
             String transaction = "Waad qaadatay $" + amount +
                     ". Haraagaagu hadda waa $" + balance;
@@ -316,6 +377,10 @@ public class Ab {
 
 
 
+
+
+
+    
     private static void transferToEVC(Scanner input) {
         System.out.print("Geli lambarka EVC Plus: ");
         String evcNumber = input.nextLine();
@@ -326,9 +391,11 @@ public class Ab {
 
         if (amount <= 0) {
             System.out.println("Fadlan geli lacag sax ah.");
-        } else if (amount > balance) {
+        } 
+        else if (amount > balance) {
             System.out.println("Haraagaagu kugu filan ma aha.");
-        } else {
+        } 
+        else {
             balance -= amount;
             String transaction = "Waxaad ka wareejisay $" + amount +
                     " lambarka EVC Plus: " + evcNumber +
@@ -342,6 +409,9 @@ public class Ab {
 
 
 
+
+
+    
     private static void accountTransfer(Scanner input) {
         System.out.print("Geli account numberka: ");
         String account = input.nextLine();
@@ -352,9 +422,11 @@ public class Ab {
 
         if (amount <= 0) {
             System.out.println("Fadlan geli lacag sax ah.");
-        } else if (amount > balance) {
+        } 
+        else if (amount > balance) {
             System.out.println("Haraagaagu kugu filan ma aha.");
-        } else {
+        }
+        else {
             balance -= amount;
             String transaction = "Waxaad ka wareejisay $" + amount +
                     " account-ka: " + account +
@@ -367,6 +439,10 @@ public class Ab {
 
 
 
+
+
+
+    
 
     private static void accountManagement(Scanner input) {
         System.out.println("Maareynta:");
@@ -401,6 +477,10 @@ public class Ab {
 
 
 
+
+
+
+    
     private static void taajService(Scanner input) {
         System.out.println("TAAJ:");
         System.out.println("1. Dir Lacag");
@@ -419,9 +499,11 @@ public class Ab {
 
                 if (amount <= 0) {
                     System.out.println("Fadlan gali lacag sax ah.");
-                } else if (amount > balance) {
+                } 
+                else if (amount > balance) {
                     System.out.println("Haraagaagu kugu filan ma aha.");
-                } else {
+                } 
+                else {
                     balance -= amount;
                     String transaction = "Waxaad u dirtay $" + amount +
                             " qofka: " + name +
@@ -437,7 +519,8 @@ public class Ab {
 
                 if (receivedAmount <= 0) {
                     System.out.println("Fadlan gali lacag sax ah.");
-                } else {
+                } 
+                else {
                     balance += receivedAmount;
                     String transaction = "Waxaad ka qaadatay $" + receivedAmount +
                             " - Haraaga cusub: $" + balance;
@@ -451,6 +534,11 @@ public class Ab {
     }
 
 
+
+
+
+
+    
 
 
     private static void payBill(Scanner input) {
@@ -468,9 +556,11 @@ public class Ab {
 
         if (amount > balance) {
             System.out.println("Haraagaagu kugu filan ma aha.");
-        } else if (amount <= 0) {
+        }
+        else if (amount <= 0) {
             System.out.println("Fadlan gali lacag sax ah.");
-        } else {
+        }
+        else {
             balance -= amount;
             String transaction = "Waxaad bixisay $" + amount +
                     " adeegga bill payment" +
@@ -483,12 +573,19 @@ public class Ab {
 
 
 
+    
+
     private static void recordTransaction(String transaction) {
         if (transactionCount < transactionHistory.length) {
             transactionHistory[transactionCount] = transaction;
             transactionCount++;
-        } else {
-      \
+        }
+        
+        
+        else {
+
+
+        
         
             for (int i = 0; i < transactionHistory.length - 1; i++) {
                 transactionHistory[i] = transactionHistory[i + 1];
